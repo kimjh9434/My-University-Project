@@ -1,0 +1,79 @@
+Ver0.6 진행상황.txt
+- Ver0.5 + 안드로이드 푸시
+
+- 메인서버에서 안드로이드로 푸시 알람을 보낸다.
+
+추가 환경 변화
+- 오픈스택에 지금까지의 환경구축을 해줘야함
+
+- MySQL 설치
+# sudo apt-get update
+# sudo apt-get install mysql-server mysql-client -y   [이때 root 비밀번호 설정]
+
+CF. 제대로 설치되었는지 확인 [MySQL 버전을 확인]
+# dpkg --list | grep mysql
+
+- MySQL 서버 시작
+# sudo service mysql start
+
+CF. MySQL 서버로의 접속 및 종료 [잘 접속할 수 있어야 한다]
+# sudo mysql -u root -p		MySQL 서버로 접속
+# QUIT				MySQL 서버 접속 종료
+
+- pip3 설치 및 업그레이드
+# sudo apt-get install python3-pip -y
+# sudo pip3 install --upgrade pip
+# sudo pip3 install --upgrade SomePackage
+
+- MySQL DB 모듈 중 하나인 PyMySql 모듈 설치 
+# sudo pip3 install PyMySQL
+# sudo apt-get install python3-pymysql
+# sudo apt-get install python-mysqldb -y       [이건 알고보니 불필요해 보이기도 함]
+# sudo pip3 install BeautifulSoup4 
+# sudo pip3 install bs4
+# sudo apt-get install python3-bs4 -y
+
+- firebase_admin 모듈 설치 [핸드폰에 데이터 전송하기 위함]
+# sudo pip3 install firebase_admin
+
+
+CF. 기존의 DB값을 확인하고 싶을 경우,
+$ sudo mysql -u root -p 	 	터미널 상에서 MySQL 서버로 접속 
+- use testDB
+- select * from fine_dust;		이게 핵심
+- quit      로 빠져나온다.
+
+
+CF. 기존의 DB를 삭제하고 싶을 경우,
+$ sudo mysql -u root -p 	 	터미널 상에서 MySQL 서버로 접속 
+- use testDB
+- drop database testDB;			이게 핵심
+- quit      로 빠져나온다.
+
+- Ver0.3의 영향으로 python3으로 실행시켜줘야 함.
+  EX) ptrhon3 MainServer.py
+      ptrhon3 RaspberryPi.py
+
+CF. RaspberryPi.py 의 내용이 실제 센서와 연결되므로, 센서없이 테스트를 하고 싶다면,
+    측정하는 코드부분을 주석처리하고, 램덤값의 주석을 해제해야 한다.
+
+
+안드로이드 푸시
+- cd misefor/venv
+- source bin/activate
+- python app_server.py 
+
+
+인스턴스 알파[117.16.137.226]에 접속한다.
+1. MainServer.py 먼저 가동
+2. MainServer는 기본적으로 시작하자마자, testDB가 있는지 확인하고, 없으면 생성하고 fine_dust table를 만들음.
+3. RaspberryPi.py 를 가동시, MainServer에 접속.
+4. 이후 계속 돌아가면서, (일단) 60초 간격으로 일반 미세먼지 데이터값 전송
+5. MainServer는 RaspberryPi로부터 오는 데이터를 받음
+6. 이때 외부 미세먼지 데이터도 별도로 받음.
+   + MySQL에 데이터를 삽입함.
+7. 만약 내부 값 또는 외부 값이 100이 넘으면, 푸시 알람이 감
+
+주의! 종료시, RaspberryPi를 모두 끈 이후에, MainServer를 종료할 것.
+     MainServer를 먼저 종료하면, socket.error: [Errno 98] Address already in use 에러가 발생해서 2분간 멍때리게 된다.
+     안기다리려면 계속 포트번호를 바꿔서 테스트 하면 된다.

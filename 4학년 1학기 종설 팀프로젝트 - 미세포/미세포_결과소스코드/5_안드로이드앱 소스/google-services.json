@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "304481461167",
+    "firebase_url": "https://misefor-206718.firebaseio.com",
+    "project_id": "misefor-206718",
+    "storage_bucket": "misefor-206718.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:304481461167:android:051d95b1fdae601c",
+        "android_client_info": {
+          "package_name": "com.example.mohammed_2284.misefor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "304481461167-p7fd3c59pdfuouovs35ql9pngmoicqa5.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "304481461167-p7fd3c59pdfuouovs35ql9pngmoicqa5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAYtrJW9oOcIfEUcUDAM5xGiyGo8eNkJsU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
