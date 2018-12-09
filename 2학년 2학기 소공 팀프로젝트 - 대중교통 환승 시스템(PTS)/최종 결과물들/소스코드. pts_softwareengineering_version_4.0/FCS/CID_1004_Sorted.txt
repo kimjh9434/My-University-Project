@@ -1,0 +1,1 @@
+CID		CRID	tagTime			    tp	state   cash	transfer  getout
