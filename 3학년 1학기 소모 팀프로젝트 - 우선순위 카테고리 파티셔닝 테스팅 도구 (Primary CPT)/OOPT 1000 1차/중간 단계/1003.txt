@@ -1,0 +1,23 @@
+R 1.1 Make new requirements
+R 1.2 Load requirements file
+R 1.3 Open requirements file by double clicking
+R 1.4 Shut down program
+R 2.1 Set project name
+R 3.1 Add category
+R 3.2 Delete category
+R 4.1 Add input value
+R 4.2 Delete input value
+R 5.1 Add property
+R 5.2 Delete property
+R 6.1 Add if property
+R 6.2 Delete if property
+R 7.1 Add single and error constraints
+R 7.2 Delete single and error constraints
+R 8.1 Set priority
+R 9.1 Show all
+R 9.2 Generate test cases | Hidden
+R 10.1 Save contempory requirements file
+R 10.2 Save and go back to first page
+R 10.3 Go previous
+R 10.4 Go next
+R 10.5 Export test case to excel file
