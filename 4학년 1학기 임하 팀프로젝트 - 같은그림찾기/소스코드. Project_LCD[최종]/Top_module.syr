@@ -1,0 +1,1347 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Reading design: Top_module.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Top_module.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Top_module"
+Output Format                      : NGC
+Target Device                      : xc3s2000-4-fg456
+
+---- Source Options
+Top Module Name                    : Top_module
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/user/Desktop/Project_LCD/countoto5.vhd" in Library work.
+Architecture behavioral of Entity countoto5 is up to date.
+Compiling vhdl file "C:/Users/user/Desktop/Project_LCD/count0to9_end.vhd" in Library work.
+Architecture behavioral of Entity count0to9_end is up to date.
+Compiling vhdl file "C:/Users/user/Desktop/Project_LCD/clockDividerx4.vhd" in Library work.
+Architecture behavioral of Entity clockdividerx4 is up to date.
+Compiling vhdl file "C:/Users/user/Desktop/Project_LCD/lfsr.vhd" in Library work.
+Architecture behavioral of Entity lfsr is up to date.
+Compiling vhdl file "C:/Users/user/Desktop/Project_LCD/firstdvd.vhd" in Library work.
+Architecture behavioral of Entity fisrtdvd is up to date.
+Compiling vhdl file "C:/Users/user/Desktop/Project_LCD/FSM.vhd" in Library work.
+Architecture behavioral of Entity fsm is up to date.
+Compiling vhdl file "C:/Users/user/Desktop/Project_LCD/lcd_divider.vhd" in Library work.
+Architecture behavioral of Entity lcd_divider is up to date.
+Compiling vhdl file "C:/Users/user/Desktop/Project_LCD/TFT_LCD.vhd" in Library work.
+Architecture behavioral of Entity tft_lcd is up to date.
+Compiling vhdl file "C:/Users/user/Desktop/Project_LCD/Shuffle.vhd" in Library work.
+Architecture behavioral of Entity shuffle is up to date.
+Compiling vhdl file "C:/Users/user/Desktop/Project_LCD/changecard.vhd" in Library work.
+Architecture behavioral of Entity changecard is up to date.
+Compiling vhdl file "C:/Users/user/Desktop/Project_LCD/TurnFSM.vhd" in Library work.
+Architecture behavioral of Entity turnfsm is up to date.
+Compiling vhdl file "C:/Users/user/Desktop/Project_LCD/ledcounter.vhd" in Library work.
+Architecture behavioral of Entity ledcounter is up to date.
+Compiling vhdl file "C:/Users/user/Desktop/Project_LCD/led.vhd" in Library work.
+Architecture behavioral of Entity led is up to date.
+Compiling vhdl file "C:/Users/user/Desktop/Project_LCD/keypad_divider.vhd" in Library work.
+Architecture behavioral of Entity keypad_divider is up to date.
+Compiling vhdl file "C:/Users/user/Desktop/Project_LCD/Key_Matrix.vhd" in Library work.
+Architecture behavioral of Entity key_matrix is up to date.
+Compiling vhdl file "C:/Users/user/Desktop/Project_LCD/Seven_Segment.vhd" in Library work.
+Architecture behavioral of Entity seven_segment is up to date.
+Compiling vhdl file "C:/Users/user/Desktop/Project_LCD/Top_module.vhd" in Library work.
+Architecture behavioral of Entity top_module is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <Top_module> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <fisrtdvd> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <FSM> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <lcd_divider> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <TFT_LCD> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Shuffle> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <changecard> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <TurnFSM> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <ledcounter> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <led> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <keypad_divider> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Key_Matrix> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Seven_Segment> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <lfsr> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <clockDividerx4> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <countoto5> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <count0to9_end> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <Top_module> in library <work> (Architecture <behavioral>).
+Entity <Top_module> analyzed. Unit <Top_module> generated.
+
+Analyzing Entity <fisrtdvd> in library <work> (Architecture <behavioral>).
+Entity <fisrtdvd> analyzed. Unit <fisrtdvd> generated.
+
+Analyzing Entity <FSM> in library <work> (Architecture <behavioral>).
+Entity <FSM> analyzed. Unit <FSM> generated.
+
+Analyzing Entity <lcd_divider> in library <work> (Architecture <behavioral>).
+Entity <lcd_divider> analyzed. Unit <lcd_divider> generated.
+
+Analyzing Entity <TFT_LCD> in library <work> (Architecture <behavioral>).
+INFO:Xst:1561 - "C:/Users/user/Desktop/Project_LCD/TFT_LCD.vhd" line 97: Mux is complete : default of case is discarded
+INFO:Xst:1561 - "C:/Users/user/Desktop/Project_LCD/TFT_LCD.vhd" line 116: Mux is complete : default of case is discarded
+INFO:Xst:1561 - "C:/Users/user/Desktop/Project_LCD/TFT_LCD.vhd" line 135: Mux is complete : default of case is discarded
+INFO:Xst:1561 - "C:/Users/user/Desktop/Project_LCD/TFT_LCD.vhd" line 154: Mux is complete : default of case is discarded
+INFO:Xst:1561 - "C:/Users/user/Desktop/Project_LCD/TFT_LCD.vhd" line 173: Mux is complete : default of case is discarded
+INFO:Xst:1561 - "C:/Users/user/Desktop/Project_LCD/TFT_LCD.vhd" line 192: Mux is complete : default of case is discarded
+INFO:Xst:1561 - "C:/Users/user/Desktop/Project_LCD/TFT_LCD.vhd" line 211: Mux is complete : default of case is discarded
+INFO:Xst:1561 - "C:/Users/user/Desktop/Project_LCD/TFT_LCD.vhd" line 230: Mux is complete : default of case is discarded
+INFO:Xst:1561 - "C:/Users/user/Desktop/Project_LCD/TFT_LCD.vhd" line 249: Mux is complete : default of case is discarded
+INFO:Xst:1561 - "C:/Users/user/Desktop/Project_LCD/TFT_LCD.vhd" line 268: Mux is complete : default of case is discarded
+INFO:Xst:1561 - "C:/Users/user/Desktop/Project_LCD/TFT_LCD.vhd" line 287: Mux is complete : default of case is discarded
+INFO:Xst:1561 - "C:/Users/user/Desktop/Project_LCD/TFT_LCD.vhd" line 306: Mux is complete : default of case is discarded
+INFO:Xst:1561 - "C:/Users/user/Desktop/Project_LCD/TFT_LCD.vhd" line 325: Mux is complete : default of case is discarded
+INFO:Xst:1561 - "C:/Users/user/Desktop/Project_LCD/TFT_LCD.vhd" line 344: Mux is complete : default of case is discarded
+INFO:Xst:1561 - "C:/Users/user/Desktop/Project_LCD/TFT_LCD.vhd" line 363: Mux is complete : default of case is discarded
+INFO:Xst:1561 - "C:/Users/user/Desktop/Project_LCD/TFT_LCD.vhd" line 382: Mux is complete : default of case is discarded
+INFO:Xst:2679 - Register <colors<0>> in unit <TFT_LCD> has a constant value of 1111111111111111 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <colors<1>> in unit <TFT_LCD> has a constant value of 0000000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <colors<2>> in unit <TFT_LCD> has a constant value of 1111100000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <colors<3>> in unit <TFT_LCD> has a constant value of 1100101100111001 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <colors<4>> in unit <TFT_LCD> has a constant value of 1111100000011111 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <colors<5>> in unit <TFT_LCD> has a constant value of 1111110011000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <colors<6>> in unit <TFT_LCD> has a constant value of 1111111111100000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <colors<7>> in unit <TFT_LCD> has a constant value of 0000011111100000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <colors<8>> in unit <TFT_LCD> has a constant value of 1000011011011101 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <colors<9>> in unit <TFT_LCD> has a constant value of 1010110101111101 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <colors<10>> in unit <TFT_LCD> has a constant value of 0000000000000001 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <colors<11>> in unit <TFT_LCD> has a constant value of 0000100000000001 during circuit operation. The register is replaced by logic.
+Entity <TFT_LCD> analyzed. Unit <TFT_LCD> generated.
+
+Analyzing Entity <Shuffle> in library <work> (Architecture <behavioral>).
+Entity <Shuffle> analyzed. Unit <Shuffle> generated.
+
+Analyzing Entity <lfsr> in library <work> (Architecture <behavioral>).
+Entity <lfsr> analyzed. Unit <lfsr> generated.
+
+Analyzing Entity <changecard> in library <work> (Architecture <behavioral>).
+Entity <changecard> analyzed. Unit <changecard> generated.
+
+Analyzing Entity <TurnFSM> in library <work> (Architecture <behavioral>).
+Entity <TurnFSM> analyzed. Unit <TurnFSM> generated.
+
+Analyzing Entity <ledcounter> in library <work> (Architecture <behavioral>).
+Entity <ledcounter> analyzed. Unit <ledcounter> generated.
+
+Analyzing Entity <led> in library <work> (Architecture <behavioral>).
+Entity <led> analyzed. Unit <led> generated.
+
+Analyzing Entity <keypad_divider> in library <work> (Architecture <behavioral>).
+Entity <keypad_divider> analyzed. Unit <keypad_divider> generated.
+
+Analyzing Entity <Key_Matrix> in library <work> (Architecture <behavioral>).
+INFO:Xst:2679 - Register <key_temp<3>> in unit <Key_Matrix> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <key_temp<2>> in unit <Key_Matrix> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <key_temp<1>> in unit <Key_Matrix> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <key_temp<0>> in unit <Key_Matrix> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <key_temp<15>> in unit <Key_Matrix> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <key_temp<14>> in unit <Key_Matrix> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <key_temp<12>> in unit <Key_Matrix> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <key_temp<7>> in unit <Key_Matrix> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <key_temp<6>> in unit <Key_Matrix> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <key_temp<4>> in unit <Key_Matrix> has a constant value of 1 during circuit operation. The register is replaced by logic.
+Entity <Key_Matrix> analyzed. Unit <Key_Matrix> generated.
+
+Analyzing Entity <clockDividerx4> in library <work> (Architecture <behavioral>).
+Entity <clockDividerx4> analyzed. Unit <clockDividerx4> generated.
+
+Analyzing Entity <Seven_Segment> in library <work> (Architecture <behavioral>).
+INFO:Xst:1561 - "C:/Users/user/Desktop/Project_LCD/Seven_Segment.vhd" line 236: Mux is complete : default of case is discarded
+Entity <Seven_Segment> analyzed. Unit <Seven_Segment> generated.
+
+Analyzing Entity <countoto5> in library <work> (Architecture <behavioral>).
+Entity <countoto5> analyzed. Unit <countoto5> generated.
+
+Analyzing Entity <count0to9_end> in library <work> (Architecture <behavioral>).
+Entity <count0to9_end> analyzed. Unit <count0to9_end> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <fisrtdvd>.
+    Related source file is "C:/Users/user/Desktop/Project_LCD/firstdvd.vhd".
+    Found 1-bit register for signal <dclk>.
+    Found 20-bit up counter for signal <cnt_data>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+Unit <fisrtdvd> synthesized.
+
+
+Synthesizing Unit <FSM>.
+    Related source file is "C:/Users/user/Desktop/Project_LCD/FSM.vhd".
+    Found finite state machine <FSM_0> for signal <curr_state>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 5                                              |
+    | Inputs             | 2                                              |
+    | Outputs            | 2                                              |
+    | Clock              | clk                       (rising_edge)        |
+    | Reset              | push_inv_reset            (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | logo                                           |
+    | Power Up State     | logo                                           |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Summary:
+	inferred   1 Finite State Machine(s).
+Unit <FSM> synthesized.
+
+
+Synthesizing Unit <lcd_divider>.
+    Related source file is "C:/Users/user/Desktop/Project_LCD/lcd_divider.vhd".
+    Found 1-bit register for signal <dclk>.
+    Found 2-bit up counter for signal <cnt_data>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+Unit <lcd_divider> synthesized.
+
+
+Synthesizing Unit <TFT_LCD>.
+    Related source file is "C:/Users/user/Desktop/Project_LCD/TFT_LCD.vhd".
+    Found 16-bit register for signal <data_out>.
+    Found 10-bit adder for signal <add0000$add0000> created at line 459.
+    Found 2x8-bit multiplier for signal <add0000$mult0000> created at line 459.
+    Found 10-bit adder carry out for signal <add0001$addsub0000> created at line 459.
+    Found 9-bit adder for signal <add0002$add0000> created at line 460.
+    Found 2x7-bit multiplier for signal <add0002$mult0000> created at line 460.
+    Found 9-bit adder carry out for signal <add0003$addsub0000> created at line 460.
+    Found 10-bit adder for signal <add0004$add0000> created at line 468.
+    Found 10-bit adder carry out for signal <add0004$addsub0000> created at line 468.
+    Found 2x8-bit multiplier for signal <add0004$mult0000> created at line 468.
+    Found 10-bit adder carry out for signal <add0005$addsub0000> created at line 468.
+    Found 9-bit adder for signal <add0006$add0000> created at line 469.
+    Found 9-bit adder carry out for signal <add0006$addsub0000> created at line 469.
+    Found 2x7-bit multiplier for signal <add0006$mult0000> created at line 469.
+    Found 9-bit adder carry out for signal <add0007$addsub0000> created at line 469.
+    Found 10-bit adder for signal <add0008$add0000> created at line 475.
+    Found 10-bit adder carry out for signal <add0008$addsub0000> created at line 475.
+    Found 2x8-bit multiplier for signal <add0008$mult0000> created at line 475.
+    Found 10-bit adder carry out for signal <add0009$addsub0000> created at line 475.
+    Found 9-bit adder for signal <add0010$add0000> created at line 476.
+    Found 9-bit adder carry out for signal <add0010$addsub0000> created at line 476.
+    Found 2x7-bit multiplier for signal <add0010$mult0000> created at line 476.
+    Found 9-bit adder carry out for signal <add0011$addsub0000> created at line 476.
+    Found 256-bit register for signal <color_position>.
+    Found 13-bit comparator greatequal for signal <data_out$cmp_ge0000> created at line 459.
+    Found 12-bit comparator greatequal for signal <data_out$cmp_ge0001> created at line 460.
+    Found 13-bit comparator greatequal for signal <data_out$cmp_ge0002> created at line 468.
+    Found 12-bit comparator greatequal for signal <data_out$cmp_ge0003> created at line 469.
+    Found 13-bit comparator greatequal for signal <data_out$cmp_ge0004> created at line 475.
+    Found 12-bit comparator greatequal for signal <data_out$cmp_ge0005> created at line 476.
+    Found 12-bit comparator greatequal for signal <data_out$cmp_ge0006> created at line 457.
+    Found 13-bit comparator greatequal for signal <data_out$cmp_ge0007> created at line 482.
+    Found 12-bit comparator greatequal for signal <data_out$cmp_ge0008> created at line 483.
+    Found 12-bit comparator greatequal for signal <data_out$cmp_ge0009> created at line 484.
+    Found 12-bit comparator greatequal for signal <data_out$cmp_ge0010> created at line 486.
+    Found 12-bit comparator greatequal for signal <data_out$cmp_ge0011> created at line 488.
+    Found 13-bit comparator greatequal for signal <data_out$cmp_ge0012> created at line 490.
+    Found 13-bit comparator greatequal for signal <data_out$cmp_ge0013> created at line 500.
+    Found 13-bit comparator greatequal for signal <data_out$cmp_ge0014> created at line 510.
+    Found 13-bit comparator lessequal for signal <data_out$cmp_le0000> created at line 459.
+    Found 12-bit comparator lessequal for signal <data_out$cmp_le0001> created at line 460.
+    Found 13-bit comparator lessequal for signal <data_out$cmp_le0002> created at line 468.
+    Found 12-bit comparator lessequal for signal <data_out$cmp_le0003> created at line 469.
+    Found 13-bit comparator lessequal for signal <data_out$cmp_le0004> created at line 475.
+    Found 12-bit comparator lessequal for signal <data_out$cmp_le0005> created at line 476.
+    Found 12-bit comparator lessequal for signal <data_out$cmp_le0006> created at line 457.
+    Found 13-bit comparator lessequal for signal <data_out$cmp_le0007> created at line 482.
+    Found 12-bit comparator lessequal for signal <data_out$cmp_le0008> created at line 483.
+    Found 12-bit comparator lessequal for signal <data_out$cmp_le0009> created at line 484.
+    Found 12-bit comparator lessequal for signal <data_out$cmp_le0010> created at line 486.
+    Found 12-bit comparator lessequal for signal <data_out$cmp_le0011> created at line 488.
+    Found 13-bit comparator lessequal for signal <data_out$cmp_le0012> created at line 490.
+    Found 13-bit comparator lessequal for signal <data_out$cmp_le0013> created at line 500.
+    Found 13-bit comparator lessequal for signal <data_out$cmp_le0014> created at line 510.
+    Found 1-bit register for signal <de_i>.
+    Found 12-bit up counter for signal <hsync_cnt>.
+    Found 11-bit up counter for signal <vsync_cnt>.
+INFO:Xst:738 - HDL ADVISOR - 256 flip-flops were inferred for signal <color_position>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+    Summary:
+	inferred   2 Counter(s).
+	inferred 273 D-type flip-flop(s).
+	inferred  16 Adder/Subtractor(s).
+	inferred   6 Multiplier(s).
+	inferred  30 Comparator(s).
+Unit <TFT_LCD> synthesized.
+
+
+Synthesizing Unit <changecard>.
+    Related source file is "C:/Users/user/Desktop/Project_LCD/changecard.vhd".
+    Found 4-bit register for signal <card_num>.
+    Found 4-bit adder for signal <card_num$addsub0000> created at line 110.
+    Found 1-bit register for signal <key_block>.
+    Found 4-bit adder for signal <lcdCard$add0000> created at line 106.
+    Found 4-bit adder for signal <lcdCard$add0001> created at line 106.
+    Found 5-bit 16-to-1 multiplexer for signal <lcdCard$mux0000> created at line 106.
+    Found 5-bit 16-to-1 multiplexer for signal <lcdCard$mux0001> created at line 106.
+    Found 3-bit comparator equal for signal <mux0016$cmp_eq0001> created at line 106.
+    Found 2-bit register for signal <PR>.
+    Found 1-bit register for signal <RS>.
+    Found 12-bit register for signal <waiting>.
+    Found 12-bit adder for signal <waiting$addsub0000> created at line 122.
+    Summary:
+	inferred 100 D-type flip-flop(s).
+	inferred   4 Adder/Subtractor(s).
+	inferred   1 Comparator(s).
+	inferred  10 Multiplexer(s).
+Unit <changecard> synthesized.
+
+
+Synthesizing Unit <TurnFSM>.
+    Related source file is "C:/Users/user/Desktop/Project_LCD/TurnFSM.vhd".
+    Found 1-bit register for signal <turn>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <TurnFSM> synthesized.
+
+
+Synthesizing Unit <ledcounter>.
+    Related source file is "C:/Users/user/Desktop/Project_LCD/ledcounter.vhd".
+    Found 12-bit up counter for signal <cnt_data>.
+    Found 1-bit register for signal <output>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+Unit <ledcounter> synthesized.
+
+
+Synthesizing Unit <led>.
+    Related source file is "C:/Users/user/Desktop/Project_LCD/led.vhd".
+INFO:Xst:1608 - Relative priorities of control signals on register <LEDbit> differ from those commonly found in the selected device family. This will result in additional logic around the register.
+WARNING:Xst:737 - Found 1-bit latch for signal <start_control>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+    Found 1-bit register for signal <timeover>.
+    Found 24-bit register for signal <LEDbit>.
+    Summary:
+	inferred  25 D-type flip-flop(s).
+Unit <led> synthesized.
+
+
+Synthesizing Unit <keypad_divider>.
+    Related source file is "C:/Users/user/Desktop/Project_LCD/keypad_divider.vhd".
+    Found 1-bit register for signal <dclk>.
+    Found 16-bit up counter for signal <cnt_data>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+Unit <keypad_divider> synthesized.
+
+
+Synthesizing Unit <lfsr>.
+    Related source file is "C:/Users/user/Desktop/Project_LCD/lfsr.vhd".
+    Found 24-bit register for signal <lfsr>.
+    Found 1-bit xor2 for signal <lfsr$xor0000>.
+    Summary:
+	inferred  24 D-type flip-flop(s).
+Unit <lfsr> synthesized.
+
+
+Synthesizing Unit <clockDividerx4>.
+    Related source file is "C:/Users/user/Desktop/Project_LCD/clockDividerx4.vhd".
+    Found 4-bit up counter for signal <cnt_data>.
+    Found 1-bit register for signal <d_clk>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+Unit <clockDividerx4> synthesized.
+
+
+Synthesizing Unit <countoto5>.
+    Related source file is "C:/Users/user/Desktop/Project_LCD/countoto5.vhd".
+    Found 3-bit register for signal <cnt_data>.
+    Found 3-bit adder for signal <cnt_data$addsub0000> created at line 29.
+    Found 3-bit 4-to-1 multiplexer for signal <cnt_data$mux0001>.
+    Summary:
+	inferred   3 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   3 Multiplexer(s).
+Unit <countoto5> synthesized.
+
+
+Synthesizing Unit <count0to9_end>.
+    Related source file is "C:/Users/user/Desktop/Project_LCD/count0to9_end.vhd".
+    Found 4-bit up counter for signal <cnt_data>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <count0to9_end> synthesized.
+
+
+Synthesizing Unit <Shuffle>.
+    Related source file is "C:/Users/user/Desktop/Project_LCD/Shuffle.vhd".
+    Found 3-bit 16-to-1 multiplexer for signal <a_card$mux0000> created at line 77.
+    Found 3-bit 16-to-1 multiplexer for signal <a_card$mux0001> created at line 78.
+    Found 48-bit register for signal <out_card>.
+    Summary:
+	inferred  48 D-type flip-flop(s).
+	inferred   6 Multiplexer(s).
+Unit <Shuffle> synthesized.
+
+
+Synthesizing Unit <Key_Matrix>.
+    Related source file is "C:/Users/user/Desktop/Project_LCD/Key_Matrix.vhd".
+WARNING:Xst:737 - Found 1-bit latch for signal <key_event>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 4-bit register for signal <key_data_int>.
+    Found 4-bit register for signal <key_in_int>.
+    Found 1-bit register for signal <key_temp<13>>.
+    Found 4-bit register for signal <key_temp<11:8>>.
+    Found 1-bit register for signal <key_temp<5>>.
+    Found 4-bit register for signal <scan_cnt>.
+    Summary:
+	inferred  14 D-type flip-flop(s).
+Unit <Key_Matrix> synthesized.
+
+
+Synthesizing Unit <Seven_Segment>.
+    Related source file is "C:/Users/user/Desktop/Project_LCD/Seven_Segment.vhd".
+    Found 16x8-bit ROM for signal <segment>.
+    Found 6-bit register for signal <dig>.
+    Found 6-bit 4-to-1 multiplexer for signal <dig$mux0001>.
+    Found 1-bit register for signal <player>.
+    Found 1-bit register for signal <player1_en>.
+    Found 1-bit register for signal <player2_en>.
+    Found 24-bit register for signal <seginput>.
+    Found 4-bit comparator greater for signal <seginput_0$cmp_gt0000> created at line 170.
+    Found 4-bit comparator less for signal <seginput_0$cmp_lt0000> created at line 176.
+    Found 4-bit 4-to-1 multiplexer for signal <seginput_0$mux0002>.
+    Found 4-bit 4-to-1 multiplexer for signal <seginput_1$mux0002>.
+    Found 4-bit 4-to-1 multiplexer for signal <seginput_2$mux0001>.
+    Found 4-bit 4-to-1 multiplexer for signal <seginput_3$mux0002>.
+    Found 4-bit 4-to-1 multiplexer for signal <seginput_4$mux0002>.
+    Found 4-bit 4-to-1 multiplexer for signal <seginput_5$mux0003>.
+    Summary:
+	inferred   1 ROM(s).
+	inferred  21 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred  30 Multiplexer(s).
+Unit <Seven_Segment> synthesized.
+
+
+Synthesizing Unit <Top_module>.
+    Related source file is "C:/Users/user/Desktop/Project_LCD/Top_module.vhd".
+    Found 2-bit register for signal <card1_position_x>.
+    Found 2-bit register for signal <card1_position_y>.
+    Found 2-bit register for signal <card2_position_x>.
+    Found 2-bit register for signal <card2_position_y>.
+    Found 1-bit register for signal <is_one_selected>.
+    Found 1-bit register for signal <is_two_selected>.
+    Found 2-bit comparator equal for signal <is_two_selected$cmp_eq0001> created at line 273.
+    Found 2-bit comparator equal for signal <is_two_selected$cmp_eq0002> created at line 273.
+    Found 4-bit adder for signal <lcdCard$addsub0000> created at line 267.
+    Found 5-bit 16-to-1 multiplexer for signal <lcdCard$mux0000> created at line 267.
+    Found 2-bit register for signal <position_x>.
+    Found 2-bit addsub for signal <position_x$share0000>.
+    Found 2-bit register for signal <position_y>.
+    Found 2-bit addsub for signal <position_y$share0000>.
+    Summary:
+	inferred  14 D-type flip-flop(s).
+	inferred   3 Adder/Subtractor(s).
+	inferred   2 Comparator(s).
+	inferred   5 Multiplexer(s).
+Unit <Top_module> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 16x8-bit ROM                                          : 1
+# Multipliers                                          : 6
+ 2x7-bit multiplier                                    : 3
+ 2x8-bit multiplier                                    : 3
+# Adders/Subtractors                                   : 24
+ 10-bit adder                                          : 3
+ 10-bit adder carry out                                : 5
+ 12-bit adder                                          : 1
+ 2-bit addsub                                          : 2
+ 3-bit adder                                           : 1
+ 4-bit adder                                           : 4
+ 9-bit adder                                           : 3
+ 9-bit adder carry out                                 : 5
+# Counters                                             : 9
+ 11-bit up counter                                     : 1
+ 12-bit up counter                                     : 2
+ 16-bit up counter                                     : 1
+ 2-bit up counter                                      : 1
+ 20-bit up counter                                     : 1
+ 4-bit up counter                                      : 3
+# Registers                                            : 141
+ 1-bit register                                        : 101
+ 12-bit register                                       : 1
+ 16-bit register                                       : 17
+ 2-bit register                                        : 7
+ 24-bit register                                       : 2
+ 3-bit register                                        : 1
+ 4-bit register                                        : 10
+ 48-bit register                                       : 1
+ 6-bit register                                        : 1
+# Latches                                              : 2
+ 1-bit latch                                           : 2
+# Comparators                                          : 35
+ 12-bit comparator greatequal                          : 8
+ 12-bit comparator lessequal                           : 8
+ 13-bit comparator greatequal                          : 7
+ 13-bit comparator lessequal                           : 7
+ 2-bit comparator equal                                : 2
+ 3-bit comparator equal                                : 1
+ 4-bit comparator greater                              : 1
+ 4-bit comparator less                                 : 1
+# Multiplexers                                         : 13
+ 3-bit 16-to-1 multiplexer                             : 2
+ 3-bit 4-to-1 multiplexer                              : 1
+ 4-bit 4-to-1 multiplexer                              : 6
+ 5-bit 16-to-1 multiplexer                             : 3
+ 6-bit 4-to-1 multiplexer                              : 1
+# Xors                                                 : 1
+ 1-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <FSM1/curr_state/FSM> on signal <curr_state[1:2]> with user encoding.
+----------------------
+ State    | Encoding
+----------------------
+ logo     | 00
+ gaming   | 01
+ gameover | 10
+----------------------
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 1
+# ROMs                                                 : 1
+ 16x8-bit ROM                                          : 1
+# Multipliers                                          : 6
+ 2x7-bit multiplier                                    : 3
+ 2x8-bit multiplier                                    : 3
+# Adders/Subtractors                                   : 24
+ 10-bit adder                                          : 3
+ 10-bit adder carry out                                : 5
+ 12-bit adder                                          : 1
+ 2-bit addsub                                          : 2
+ 3-bit adder                                           : 1
+ 4-bit adder                                           : 4
+ 9-bit adder                                           : 3
+ 9-bit adder carry out                                 : 5
+# Counters                                             : 9
+ 11-bit up counter                                     : 1
+ 12-bit up counter                                     : 2
+ 16-bit up counter                                     : 1
+ 2-bit up counter                                      : 1
+ 20-bit up counter                                     : 1
+ 4-bit up counter                                      : 3
+# Registers                                            : 544
+ Flip-Flops                                            : 544
+# Latches                                              : 2
+ 1-bit latch                                           : 2
+# Comparators                                          : 35
+ 12-bit comparator greatequal                          : 8
+ 12-bit comparator lessequal                           : 8
+ 13-bit comparator greatequal                          : 7
+ 13-bit comparator lessequal                           : 7
+ 2-bit comparator equal                                : 2
+ 3-bit comparator equal                                : 1
+ 4-bit comparator greater                              : 1
+ 4-bit comparator less                                 : 1
+# Multiplexers                                         : 13
+ 3-bit 16-to-1 multiplexer                             : 2
+ 3-bit 4-to-1 multiplexer                              : 1
+ 4-bit 4-to-1 multiplexer                              : 6
+ 5-bit 16-to-1 multiplexer                             : 3
+ 6-bit 4-to-1 multiplexer                              : 1
+# Xors                                                 : 1
+ 1-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <PR_0> in Unit <changecard> is equivalent to the following FF/Latch, which will be removed : <RS> 
+WARNING:Xst:1710 - FF/Latch <seginput_1_2> (without init value) has a constant value of 0 in block <Seven_Segment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <seginput_0_0> (without init value) has a constant value of 0 in block <Seven_Segment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <seginput_4_3> (without init value) has a constant value of 1 in block <Seven_Segment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <seginput_3_3> (without init value) has a constant value of 1 in block <Seven_Segment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <seginput_3_1> (without init value) has a constant value of 1 in block <Seven_Segment>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <color_position_5_6> in Unit <TFT_LCD> is equivalent to the following FF/Latch, which will be removed : <color_position_5_10> 
+INFO:Xst:2261 - The FF/Latch <color_position_7_3> in Unit <TFT_LCD> is equivalent to the following FF/Latch, which will be removed : <color_position_7_4> 
+INFO:Xst:2261 - The FF/Latch <color_position_4_3> in Unit <TFT_LCD> is equivalent to the following FF/Latch, which will be removed : <color_position_4_4> 
+INFO:Xst:2261 - The FF/Latch <color_position_1_3> in Unit <TFT_LCD> is equivalent to the following FF/Latch, which will be removed : <color_position_1_4> 
+INFO:Xst:2261 - The FF/Latch <color_position_11_6> in Unit <TFT_LCD> is equivalent to the following FF/Latch, which will be removed : <color_position_11_10> 
+INFO:Xst:2261 - The FF/Latch <color_position_3_6> in Unit <TFT_LCD> is equivalent to the following FF/Latch, which will be removed : <color_position_3_10> 
+INFO:Xst:2261 - The FF/Latch <color_position_1_6> in Unit <TFT_LCD> is equivalent to the following FF/Latch, which will be removed : <color_position_1_10> 
+INFO:Xst:2261 - The FF/Latch <color_position_13_5> in Unit <TFT_LCD> is equivalent to the following FF/Latch, which will be removed : <color_position_13_8> 
+INFO:Xst:2261 - The FF/Latch <color_position_10_5> in Unit <TFT_LCD> is equivalent to the following FF/Latch, which will be removed : <color_position_10_8> 
+INFO:Xst:2261 - The FF/Latch <color_position_13_3> in Unit <TFT_LCD> is equivalent to the following FF/Latch, which will be removed : <color_position_13_4> 
+INFO:Xst:2261 - The FF/Latch <color_position_10_3> in Unit <TFT_LCD> is equivalent to the following FF/Latch, which will be removed : <color_position_10_4> 
+INFO:Xst:2261 - The FF/Latch <color_position_8_5> in Unit <TFT_LCD> is equivalent to the following FF/Latch, which will be removed : <color_position_8_8> 
+INFO:Xst:2261 - The FF/Latch <color_position_5_5> in Unit <TFT_LCD> is equivalent to the following FF/Latch, which will be removed : <color_position_5_8> 
+INFO:Xst:2261 - The FF/Latch <color_position_2_5> in Unit <TFT_LCD> is equivalent to the following FF/Latch, which will be removed : <color_position_2_8> 
+INFO:Xst:2261 - The FF/Latch <color_position_8_3> in Unit <TFT_LCD> is equivalent to the following FF/Latch, which will be removed : <color_position_8_4> 
+INFO:Xst:2261 - The FF/Latch <color_position_5_3> in Unit <TFT_LCD> is equivalent to the following FF/Latch, which will be removed : <color_position_5_4> 
+INFO:Xst:2261 - The FF/Latch <color_position_2_3> in Unit <TFT_LCD> is equivalent to the following FF/Latch, which will be removed : <color_position_2_4> 
+INFO:Xst:2261 - The FF/Latch <color_position_8_6> in Unit <TFT_LCD> is equivalent to the following FF/Latch, which will be removed : <color_position_8_10> 
+INFO:Xst:2261 - The FF/Latch <color_position_14_6> in Unit <TFT_LCD> is equivalent to the following FF/Latch, which will be removed : <color_position_14_10> 
+INFO:Xst:2261 - The FF/Latch <color_position_6_6> in Unit <TFT_LCD> is equivalent to the following FF/Latch, which will be removed : <color_position_6_10> 
+INFO:Xst:2261 - The FF/Latch <color_position_14_5> in Unit <TFT_LCD> is equivalent to the following FF/Latch, which will be removed : <color_position_14_8> 
+INFO:Xst:2261 - The FF/Latch <color_position_11_5> in Unit <TFT_LCD> is equivalent to the following FF/Latch, which will be removed : <color_position_11_8> 
+INFO:Xst:2261 - The FF/Latch <color_position_12_6> in Unit <TFT_LCD> is equivalent to the following FF/Latch, which will be removed : <color_position_12_10> 
+INFO:Xst:2261 - The FF/Latch <color_position_14_3> in Unit <TFT_LCD> is equivalent to the following FF/Latch, which will be removed : <color_position_14_4> 
+INFO:Xst:2261 - The FF/Latch <color_position_4_6> in Unit <TFT_LCD> is equivalent to the following FF/Latch, which will be removed : <color_position_4_10> 
+INFO:Xst:2261 - The FF/Latch <color_position_11_3> in Unit <TFT_LCD> is equivalent to the following FF/Latch, which will be removed : <color_position_11_4> 
+INFO:Xst:2261 - The FF/Latch <color_position_10_6> in Unit <TFT_LCD> is equivalent to the following FF/Latch, which will be removed : <color_position_10_10> 
+INFO:Xst:2261 - The FF/Latch <color_position_2_6> in Unit <TFT_LCD> is equivalent to the following FF/Latch, which will be removed : <color_position_2_10> 
+INFO:Xst:2261 - The FF/Latch <color_position_9_5> in Unit <TFT_LCD> is equivalent to the following FF/Latch, which will be removed : <color_position_9_8> 
+INFO:Xst:2261 - The FF/Latch <color_position_6_5> in Unit <TFT_LCD> is equivalent to the following FF/Latch, which will be removed : <color_position_6_8> 
+INFO:Xst:2261 - The FF/Latch <color_position_3_5> in Unit <TFT_LCD> is equivalent to the following FF/Latch, which will be removed : <color_position_3_8> 
+INFO:Xst:2261 - The FF/Latch <color_position_0_5> in Unit <TFT_LCD> is equivalent to the following FF/Latch, which will be removed : <color_position_0_8> 
+INFO:Xst:2261 - The FF/Latch <color_position_0_6> in Unit <TFT_LCD> is equivalent to the following FF/Latch, which will be removed : <color_position_0_10> 
+INFO:Xst:2261 - The FF/Latch <color_position_9_3> in Unit <TFT_LCD> is equivalent to the following FF/Latch, which will be removed : <color_position_9_4> 
+INFO:Xst:2261 - The FF/Latch <color_position_6_3> in Unit <TFT_LCD> is equivalent to the following FF/Latch, which will be removed : <color_position_6_4> 
+INFO:Xst:2261 - The FF/Latch <color_position_3_3> in Unit <TFT_LCD> is equivalent to the following FF/Latch, which will be removed : <color_position_3_4> 
+INFO:Xst:2261 - The FF/Latch <color_position_0_3> in Unit <TFT_LCD> is equivalent to the following FF/Latch, which will be removed : <color_position_0_4> 
+INFO:Xst:2261 - The FF/Latch <color_position_15_5> in Unit <TFT_LCD> is equivalent to the following FF/Latch, which will be removed : <color_position_15_8> 
+INFO:Xst:2261 - The FF/Latch <color_position_12_5> in Unit <TFT_LCD> is equivalent to the following FF/Latch, which will be removed : <color_position_12_8> 
+INFO:Xst:2261 - The FF/Latch <color_position_15_3> in Unit <TFT_LCD> is equivalent to the following FF/Latch, which will be removed : <color_position_15_4> 
+INFO:Xst:2261 - The FF/Latch <color_position_9_6> in Unit <TFT_LCD> is equivalent to the following FF/Latch, which will be removed : <color_position_9_10> 
+INFO:Xst:2261 - The FF/Latch <color_position_12_3> in Unit <TFT_LCD> is equivalent to the following FF/Latch, which will be removed : <color_position_12_4> 
+INFO:Xst:2261 - The FF/Latch <color_position_15_6> in Unit <TFT_LCD> is equivalent to the following FF/Latch, which will be removed : <color_position_15_10> 
+INFO:Xst:2261 - The FF/Latch <color_position_7_6> in Unit <TFT_LCD> is equivalent to the following FF/Latch, which will be removed : <color_position_7_10> 
+INFO:Xst:2261 - The FF/Latch <color_position_7_5> in Unit <TFT_LCD> is equivalent to the following FF/Latch, which will be removed : <color_position_7_8> 
+INFO:Xst:2261 - The FF/Latch <color_position_4_5> in Unit <TFT_LCD> is equivalent to the following FF/Latch, which will be removed : <color_position_4_8> 
+INFO:Xst:2261 - The FF/Latch <color_position_13_6> in Unit <TFT_LCD> is equivalent to the following FF/Latch, which will be removed : <color_position_13_10> 
+INFO:Xst:2261 - The FF/Latch <color_position_1_5> in Unit <TFT_LCD> is equivalent to the following FF/Latch, which will be removed : <color_position_1_8> 
+
+Optimizing unit <Top_module> ...
+
+Optimizing unit <fisrtdvd> ...
+
+Optimizing unit <TFT_LCD> ...
+INFO:Xst:2261 - The FF/Latch <data_out_3> in Unit <TFT_LCD> is equivalent to the following FF/Latch, which will be removed : <data_out_4> 
+INFO:Xst:2261 - The FF/Latch <data_out_6> in Unit <TFT_LCD> is equivalent to the following FF/Latch, which will be removed : <data_out_10> 
+INFO:Xst:2261 - The FF/Latch <data_out_5> in Unit <TFT_LCD> is equivalent to the following FF/Latch, which will be removed : <data_out_8> 
+INFO:Xst:2261 - The FF/Latch <data_out_3> in Unit <TFT_LCD> is equivalent to the following FF/Latch, which will be removed : <data_out_4> 
+INFO:Xst:2261 - The FF/Latch <data_out_6> in Unit <TFT_LCD> is equivalent to the following FF/Latch, which will be removed : <data_out_10> 
+INFO:Xst:2261 - The FF/Latch <data_out_5> in Unit <TFT_LCD> is equivalent to the following FF/Latch, which will be removed : <data_out_8> 
+INFO:Xst:2261 - The FF/Latch <data_out_3> in Unit <TFT_LCD> is equivalent to the following FF/Latch, which will be removed : <data_out_4> 
+INFO:Xst:2261 - The FF/Latch <data_out_6> in Unit <TFT_LCD> is equivalent to the following FF/Latch, which will be removed : <data_out_10> 
+INFO:Xst:2261 - The FF/Latch <data_out_5> in Unit <TFT_LCD> is equivalent to the following FF/Latch, which will be removed : <data_out_8> 
+INFO:Xst:2261 - The FF/Latch <data_out_3> in Unit <TFT_LCD> is equivalent to the following FF/Latch, which will be removed : <data_out_4> 
+INFO:Xst:2261 - The FF/Latch <data_out_6> in Unit <TFT_LCD> is equivalent to the following FF/Latch, which will be removed : <data_out_10> 
+INFO:Xst:2261 - The FF/Latch <data_out_5> in Unit <TFT_LCD> is equivalent to the following FF/Latch, which will be removed : <data_out_8> 
+
+Optimizing unit <changecard> ...
+
+Optimizing unit <led> ...
+
+Optimizing unit <lfsr> ...
+
+Optimizing unit <countoto5> ...
+
+Optimizing unit <Shuffle> ...
+
+Optimizing unit <Key_Matrix> ...
+
+Optimizing unit <Seven_Segment> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Top_module, actual ratio is 4.
+FlipFlop u_tft_lcd/hsync_cnt_10 has been replicated 1 time(s)
+FlipFlop u_tft_lcd/hsync_cnt_11 has been replicated 2 time(s)
+FlipFlop u_tft_lcd/vsync_cnt_10 has been replicated 1 time(s)
+FlipFlop u_tft_lcd/vsync_cnt_7 has been replicated 1 time(s)
+FlipFlop u_tft_lcd/vsync_cnt_9 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 580
+ Flip-Flops                                            : 580
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : Top_module.ngr
+Top Level Output File Name         : Top_module
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 68
+
+Cell Usage :
+# BELS                             : 2128
+#      GND                         : 1
+#      INV                         : 55
+#      LUT1                        : 97
+#      LUT2                        : 199
+#      LUT2_D                      : 1
+#      LUT2_L                      : 9
+#      LUT3                        : 290
+#      LUT3_D                      : 12
+#      LUT3_L                      : 1
+#      LUT4                        : 766
+#      LUT4_D                      : 18
+#      LUT4_L                      : 96
+#      MULT_AND                    : 6
+#      MUXCY                       : 265
+#      MUXF5                       : 189
+#      MUXF6                       : 26
+#      MUXF7                       : 13
+#      VCC                         : 1
+#      XORCY                       : 83
+# FlipFlops/Latches                : 582
+#      FD                          : 55
+#      FDC                         : 71
+#      FDCE                        : 285
+#      FDCPE                       : 24
+#      FDE                         : 101
+#      FDP                         : 3
+#      FDPE                        : 13
+#      FDR                         : 1
+#      FDS                         : 27
+#      LD                          : 2
+# Clock Buffers                    : 4
+#      BUFG                        : 3
+#      BUFGP                       : 1
+# IO Buffers                       : 67
+#      IBUF                        : 7
+#      OBUF                        : 60
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s2000fg456-4 
+
+ Number of Slices:                      864  out of  20480     4%  
+ Number of Slice Flip Flops:            578  out of  40960     1%  
+ Number of 4 input LUTs:               1544  out of  40960     3%  
+ Number of IOs:                          68
+ Number of bonded IOBs:                  68  out of    333    20%  
+    IOB Flip Flops:                       4
+ Number of GCLKs:                         4  out of      8    50%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+------------------------------------------------------------------+-------------------------------+-------+
+Clock Signal                                                      | Clock buffer(FF name)         | Load  |
+------------------------------------------------------------------+-------------------------------+-------+
+KEY_PAD/key_event                                                 | NONE(is_two_selected)         | 14    |
+clk                                                               | BUFGP                         | 115   |
+FDVD/dclk1                                                        | BUFG                          | 152   |
+LCD_DVD/dclk1                                                     | BUFG                          | 251   |
+LEDmain/start_control_not0001(LEDmain/start_control_not00011:O)   | NONE(*)(LEDmain/start_control)| 1     |
+LEDc/output1                                                      | BUFG                          | 25    |
+KEY_DVD/dclk                                                      | NONE(KEY_PAD/DVD0/cnt_data_3) | 9     |
+KEY_PAD/DVD0/d_clk                                                | NONE(KEY_PAD/scan_cnt_0)      | 14    |
+CC/key_block_cmp_eq0000(u_tft_lcd/color_position_10_cmp_eq00001:O)| NONE(*)(KEY_PAD/key_event)    | 1     |
+------------------------------------------------------------------+-------------------------------+-------+
+(*) These 2 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+---------------------------------------------------+-------------------------+-------+
+Control Signal                                     | Buffer(FF name)         | Load  |
+---------------------------------------------------+-------------------------+-------+
+LCD_RESET(u_tft_lcd/RSTB_inv1_INV_0:O)             | NONE(LCD_DVD/cnt_data_0)| 254   |
+rst_inv(rst_inv1_INV_0:O)                          | NONE(FDVD/cnt_data_0)   | 94    |
+LEDmain/LEDbit_and0000(LEDmain/LEDbit_and00001:O)  | NONE(LEDmain/LEDbit_0)  | 24    |
+LEDmain/LEDbit_or0000(LEDmain/LEDbit_or00001:O)    | NONE(LEDmain/LEDbit_0)  | 24    |
+LEDc/output_not0002(LEDc/output_not00021:O)        | NONE(LEDc/cnt_data_0)   | 13    |
+is_two_selected_or0000(is_two_selected_or00001:O)  | NONE(card1_position_x_0)| 10    |
+LEDmain/timeover_or0000(LEDmain/timeover_or00001:O)| NONE(LEDmain/timeover)  | 1     |
+---------------------------------------------------+-------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 13.634ns (Maximum Frequency: 73.348MHz)
+   Minimum input arrival time before clock: 6.579ns
+   Maximum output required time after clock: 16.953ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'KEY_PAD/key_event'
+  Clock period: 9.234ns (frequency: 108.299MHz)
+  Total number of paths / destination ports: 234 / 22
+-------------------------------------------------------------------------
+Delay:               9.234ns (Levels of Logic = 6)
+  Source:            position_y_0 (FF)
+  Destination:       is_two_selected (FF)
+  Source Clock:      KEY_PAD/key_event rising
+  Destination Clock: KEY_PAD/key_event rising
+
+  Data Path: position_y_0 to is_two_selected
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            26   0.720   2.158  position_y_0 (position_y_0)
+     LUT3:I0->O            1   0.551   0.000  Mmux_lcdCard_mux0000_5 (Mmux_lcdCard_mux0000_5)
+     MUXF5:I1->O           1   0.360   0.000  Mmux_lcdCard_mux0000_4_f5 (Mmux_lcdCard_mux0000_4_f5)
+     MUXF6:I1->O           1   0.342   0.000  Mmux_lcdCard_mux0000_3_f6 (Mmux_lcdCard_mux0000_3_f6)
+     MUXF7:I1->O           1   0.342   0.996  Mmux_lcdCard_mux0000_2_f7 (lcdCard_mux0000<4>)
+     LUT4_D:I1->O          1   0.551   1.140  is_two_selected_and00002 (N12)
+     LUT3:I0->O            5   0.551   0.921  is_two_selected_and000096 (is_two_selected_and0000)
+     FDCE:CE                   0.602          is_two_selected
+    ----------------------------------------
+    Total                      9.234ns (4.019ns logic, 5.215ns route)
+                                       (43.5% logic, 56.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 7.721ns (frequency: 129.521MHz)
+  Total number of paths / destination ports: 8052 / 194
+-------------------------------------------------------------------------
+Delay:               7.721ns (Levels of Logic = 6)
+  Source:            S1/LFS0/lfsr_4 (FF)
+  Destination:       S1/out_card_47 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: S1/LFS0/lfsr_4 to S1/out_card_47
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDS:C->Q             41   0.720   2.244  S1/LFS0/lfsr_4 (S1/LFS0/lfsr_4)
+     LUT3:I0->O            1   0.551   0.000  S1/Mmux_a_card_mux0001_5 (S1/Mmux_a_card_mux0001_5)
+     MUXF5:I1->O           1   0.360   0.000  S1/Mmux_a_card_mux0001_4_f5 (S1/Mmux_a_card_mux0001_4_f5)
+     MUXF6:I1->O           1   0.342   0.000  S1/Mmux_a_card_mux0001_3_f6 (S1/Mmux_a_card_mux0001_3_f6)
+     MUXF7:I1->O          32   0.342   2.048  S1/Mmux_a_card_mux0001_2_f7 (S1/a_card_mux0001<0>)
+     LUT4:I1->O            1   0.551   0.000  S1/a_card_9_mux0000<0>1 (S1/a_card_9_mux0000<0>1)
+     MUXF5:I1->O           1   0.360   0.000  S1/a_card_9_mux0000<0>_f5 (S1/a_card_9_mux0000<0>)
+     FDE:D                     0.203          S1/out_card_18
+    ----------------------------------------
+    Total                      7.721ns (3.429ns logic, 4.292ns route)
+                                       (44.4% logic, 55.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'FDVD/dclk1'
+  Clock period: 10.677ns (frequency: 93.659MHz)
+  Total number of paths / destination ports: 5474 / 130
+-------------------------------------------------------------------------
+Delay:               10.677ns (Levels of Logic = 9)
+  Source:            CC/lcdCard<0>_1 (FF)
+  Destination:       CC/card_num_3 (FF)
+  Source Clock:      FDVD/dclk1 rising
+  Destination Clock: FDVD/dclk1 rising
+
+  Data Path: CC/lcdCard<0>_1 to CC/card_num_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             15   0.720   1.383  CC/lcdCard<0>_1 (CC/lcdCard<0>_1)
+     LUT3:I1->O            1   0.551   0.000  CC/Mmux_lcdCard_mux0001_81 (CC/Mmux_lcdCard_mux0001_81)
+     MUXF5:I0->O           1   0.360   0.000  CC/Mmux_lcdCard_mux0001_6_f5_0 (CC/Mmux_lcdCard_mux0001_6_f51)
+     MUXF6:I0->O           1   0.342   0.000  CC/Mmux_lcdCard_mux0001_4_f6_0 (CC/Mmux_lcdCard_mux0001_4_f61)
+     MUXF7:I0->O           1   0.342   1.140  CC/Mmux_lcdCard_mux0001_2_f7_0 (CC/lcdCard_mux0001<1>)
+     LUT4:I0->O            1   0.551   0.869  CC/mux0016_cmp_eq00013_SW0 (N370)
+     LUT3_D:I2->O          3   0.551   0.975  CC/mux0016_cmp_eq00013 (CC/mux0016_cmp_eq0001)
+     LUT3_D:I2->LO         1   0.551   0.168  CC/card_num_mux0000<3>11 (N746)
+     LUT4:I2->O            1   0.551   0.869  CC/card_num_mux0000<0>_SW1 (N373)
+     LUT4:I2->O            1   0.551   0.000  CC/card_num_mux0000<0> (CC/card_num_mux0000<0>)
+     FD:D                      0.203          CC/card_num_3
+    ----------------------------------------
+    Total                     10.677ns (5.273ns logic, 5.404ns route)
+                                       (49.4% logic, 50.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'LCD_DVD/dclk1'
+  Clock period: 13.634ns (frequency: 73.348MHz)
+  Total number of paths / destination ports: 19644 / 70
+-------------------------------------------------------------------------
+Delay:               13.634ns (Levels of Logic = 11)
+  Source:            u_tft_lcd/hsync_cnt_3 (FF)
+  Destination:       u_tft_lcd/data_out_14 (FF)
+  Source Clock:      LCD_DVD/dclk1 rising
+  Destination Clock: LCD_DVD/dclk1 rising
+
+  Data Path: u_tft_lcd/hsync_cnt_3 to u_tft_lcd/data_out_14
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             17   0.720   1.684  u_tft_lcd/hsync_cnt_3 (u_tft_lcd/hsync_cnt_3)
+     LUT1:I0->O            1   0.551   0.000  u_tft_lcd/Mcompar_data_out_cmp_le0007_cy<1>_rt (u_tft_lcd/Mcompar_data_out_cmp_le0007_cy<1>_rt)
+     MUXCY:S->O            1   0.500   0.000  u_tft_lcd/Mcompar_data_out_cmp_le0007_cy<1> (u_tft_lcd/Mcompar_data_out_cmp_le0007_cy<1>)
+     MUXCY:CI->O           1   0.064   0.000  u_tft_lcd/Mcompar_data_out_cmp_le0007_cy<2> (u_tft_lcd/Mcompar_data_out_cmp_le0007_cy<2>)
+     MUXCY:CI->O           1   0.064   0.000  u_tft_lcd/Mcompar_data_out_cmp_le0007_cy<3> (u_tft_lcd/Mcompar_data_out_cmp_le0007_cy<3>)
+     MUXCY:CI->O           2   0.303   0.945  u_tft_lcd/Mcompar_data_out_cmp_le0007_cy<4> (u_tft_lcd/Mcompar_data_out_cmp_le0007_cy<4>)
+     LUT3_D:I2->O         63   0.551   2.057  u_tft_lcd/Mcompar_data_out_cmp_le0007_cy<6>1 (u_tft_lcd/data_out_cmp_le0012)
+     LUT4_D:I3->O         12   0.551   1.144  u_tft_lcd/data_out_mux0028<0>351 (u_tft_lcd/N83)
+     LUT4:I3->O            1   0.551   1.140  u_tft_lcd/data_out_mux0028<14>50 (u_tft_lcd/data_out_mux0028<14>50)
+     LUT4:I0->O            1   0.551   0.827  u_tft_lcd/data_out_mux0028<14>63 (u_tft_lcd/data_out_mux0028<14>63)
+     LUT4_L:I3->LO         1   0.551   0.126  u_tft_lcd/data_out_mux0028<14>35_SW0 (N549)
+     LUT4:I3->O            1   0.551   0.000  u_tft_lcd/data_out_mux0028<14>121 (u_tft_lcd/data_out_mux0028<14>)
+     FDCE:D                    0.203          u_tft_lcd/data_out_14
+    ----------------------------------------
+    Total                     13.634ns (5.711ns logic, 7.923ns route)
+                                       (41.9% logic, 58.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'LEDmain/start_control_not0001'
+  Clock period: 2.503ns (frequency: 399.521MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               2.503ns (Levels of Logic = 1)
+  Source:            LEDmain/start_control (LATCH)
+  Destination:       LEDmain/start_control (LATCH)
+  Source Clock:      LEDmain/start_control_not0001 falling
+  Destination Clock: LEDmain/start_control_not0001 falling
+
+  Data Path: LEDmain/start_control to LEDmain/start_control
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               5   0.633   1.116  LEDmain/start_control (LEDmain/start_control)
+     LUT2:I1->O            1   0.551   0.000  LEDmain/LEDbit_and00021 (LEDmain/LEDbit_and0002)
+     LD:D                      0.203          LEDmain/start_control
+    ----------------------------------------
+    Total                      2.503ns (1.387ns logic, 1.116ns route)
+                                       (55.4% logic, 44.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'LEDc/output1'
+  Clock period: 7.449ns (frequency: 134.246MHz)
+  Total number of paths / destination ports: 623 / 48
+-------------------------------------------------------------------------
+Delay:               7.449ns (Levels of Logic = 8)
+  Source:            LEDmain/LEDbit_8 (FF)
+  Destination:       LEDmain/LEDbit_23 (FF)
+  Source Clock:      LEDc/output1 rising
+  Destination Clock: LEDc/output1 rising
+
+  Data Path: LEDmain/LEDbit_8 to LEDmain/LEDbit_23
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCPE:C->Q            3   0.720   1.246  LEDmain/LEDbit_8 (LEDmain/LEDbit_8)
+     LUT4:I0->O            1   0.551   0.000  LEDmain/LEDbit_cmp_eq0001_wg_lut<0> (LEDmain/LEDbit_cmp_eq0001_wg_lut<0>)
+     MUXCY:S->O            1   0.500   0.000  LEDmain/LEDbit_cmp_eq0001_wg_cy<0> (LEDmain/LEDbit_cmp_eq0001_wg_cy<0>)
+     MUXCY:CI->O           1   0.064   0.000  LEDmain/LEDbit_cmp_eq0001_wg_cy<1> (LEDmain/LEDbit_cmp_eq0001_wg_cy<1>)
+     MUXCY:CI->O           1   0.064   0.000  LEDmain/LEDbit_cmp_eq0001_wg_cy<2> (LEDmain/LEDbit_cmp_eq0001_wg_cy<2>)
+     MUXCY:CI->O           1   0.064   0.000  LEDmain/LEDbit_cmp_eq0001_wg_cy<3> (LEDmain/LEDbit_cmp_eq0001_wg_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  LEDmain/LEDbit_cmp_eq0001_wg_cy<4> (LEDmain/LEDbit_cmp_eq0001_wg_cy<4>)
+     MUXCY:CI->O           2   0.281   0.945  LEDmain/LEDbit_cmp_eq0001_wg_cy<5> (LEDmain/LEDbit_cmp_eq0001)
+     LUT4:I2->O           24   0.551   1.797  LEDmain/LEDbit_and0001 (LEDmain/LEDbit_and0001)
+     FDCPE:CE                  0.602          LEDmain/LEDbit_0
+    ----------------------------------------
+    Total                      7.449ns (3.461ns logic, 3.988ns route)
+                                       (46.5% logic, 53.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'KEY_DVD/dclk'
+  Clock period: 5.312ns (frequency: 188.253MHz)
+  Total number of paths / destination ports: 15 / 6
+-------------------------------------------------------------------------
+Delay:               5.312ns (Levels of Logic = 2)
+  Source:            KEY_PAD/DVD0/cnt_data_0 (FF)
+  Destination:       KEY_PAD/DVD0/d_clk (FF)
+  Source Clock:      KEY_DVD/dclk rising
+  Destination Clock: KEY_DVD/dclk rising
+
+  Data Path: KEY_PAD/DVD0/cnt_data_0 to KEY_PAD/DVD0/d_clk
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             5   0.720   1.260  KEY_PAD/DVD0/cnt_data_0 (KEY_PAD/DVD0/cnt_data_0)
+     LUT3:I0->O            1   0.551   0.827  KEY_PAD/DVD0/d_clk_not0002_SW0 (N226)
+     LUT4:I3->O            1   0.551   0.801  KEY_PAD/DVD0/d_clk_not0002 (KEY_PAD/DVD0/d_clk_not0002)
+     FDCE:CE                   0.602          KEY_PAD/DVD0/d_clk
+    ----------------------------------------
+    Total                      5.312ns (2.424ns logic, 2.888ns route)
+                                       (45.6% logic, 54.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'KEY_PAD/DVD0/d_clk'
+  Clock period: 8.150ns (frequency: 122.699MHz)
+  Total number of paths / destination ports: 110 / 14
+-------------------------------------------------------------------------
+Delay:               8.150ns (Levels of Logic = 4)
+  Source:            KEY_PAD/scan_cnt_0 (FF)
+  Destination:       KEY_PAD/key_data_int_1 (FF)
+  Source Clock:      KEY_PAD/DVD0/d_clk rising
+  Destination Clock: KEY_PAD/DVD0/d_clk rising
+
+  Data Path: KEY_PAD/scan_cnt_0 to KEY_PAD/key_data_int_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            15   0.720   1.527  KEY_PAD/scan_cnt_0 (KEY_PAD/scan_cnt_0)
+     LUT2:I0->O            2   0.551   1.216  KEY_PAD/key_data_int_mux0000<2>81 (KEY_PAD/N26)
+     LUT4:I0->O            1   0.551   1.140  KEY_PAD/key_data_int_mux0000<2>26 (KEY_PAD/key_data_int_mux0000<2>26)
+     LUT2:I0->O            1   0.551   1.140  KEY_PAD/key_data_int_mux0000<2>43 (KEY_PAD/key_data_int_mux0000<2>43)
+     LUT4:I0->O            1   0.551   0.000  KEY_PAD/key_data_int_mux0000<2>112 (KEY_PAD/key_data_int_mux0000<2>)
+     FDE:D                     0.203          KEY_PAD/key_data_int_1
+    ----------------------------------------
+    Total                      8.150ns (3.127ns logic, 5.023ns route)
+                                       (38.4% logic, 61.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              2.667ns (Levels of Logic = 2)
+  Source:            start (PAD)
+  Destination:       FSM1/curr_state_FSM_FFd2 (FF)
+  Destination Clock: clk rising
+
+  Data Path: start to FSM1/curr_state_FSM_FFd2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             7   0.821   1.092  start_IBUF (start_IBUF)
+     LUT4:I3->O            1   0.551   0.000  FSM1/curr_state_FSM_FFd2-In1 (FSM1/curr_state_FSM_FFd2-In)
+     FDC:D                     0.203          FSM1/curr_state_FSM_FFd2
+    ----------------------------------------
+    Total                      2.667ns (1.575ns logic, 1.092ns route)
+                                       (59.1% logic, 40.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'LEDmain/start_control_not0001'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              2.980ns (Levels of Logic = 2)
+  Source:            start (PAD)
+  Destination:       LEDmain/start_control (LATCH)
+  Destination Clock: LEDmain/start_control_not0001 falling
+
+  Data Path: start to LEDmain/start_control
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             7   0.821   1.405  start_IBUF (start_IBUF)
+     LUT2:I0->O            1   0.551   0.000  LEDmain/LEDbit_and00021 (LEDmain/LEDbit_and0002)
+     LD:D                      0.203          LEDmain/start_control
+    ----------------------------------------
+    Total                      2.980ns (1.575ns logic, 1.405ns route)
+                                       (52.9% logic, 47.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'LEDc/output1'
+  Total number of paths / destination ports: 24 / 24
+-------------------------------------------------------------------------
+Offset:              6.579ns (Levels of Logic = 3)
+  Source:            start (PAD)
+  Destination:       LEDmain/LEDbit_23 (FF)
+  Destination Clock: LEDc/output1 rising
+
+  Data Path: start to LEDmain/LEDbit_23
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             7   0.821   1.261  start_IBUF (start_IBUF)
+     LUT2:I1->O            1   0.551   0.996  LEDmain/LEDbit_and0001_SW0 (N240)
+     LUT4:I1->O           24   0.551   1.797  LEDmain/LEDbit_and0001 (LEDmain/LEDbit_and0001)
+     FDCPE:CE                  0.602          LEDmain/LEDbit_0
+    ----------------------------------------
+    Total                      6.579ns (2.525ns logic, 4.054ns route)
+                                       (38.4% logic, 61.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'KEY_DVD/dclk'
+  Total number of paths / destination ports: 4 / 4
+-------------------------------------------------------------------------
+Offset:              1.825ns (Levels of Logic = 1)
+  Source:            key_in<3> (PAD)
+  Destination:       KEY_PAD/key_in_int_3 (FF)
+  Destination Clock: KEY_DVD/dclk rising
+
+  Data Path: key_in<3> to KEY_PAD/key_in_int_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   0.821   0.801  key_in_3_IBUF (key_in_3_IBUF)
+     FDPE:D                    0.203          KEY_PAD/key_in_int_3
+    ----------------------------------------
+    Total                      1.825ns (1.024ns logic, 0.801ns route)
+                                       (56.1% logic, 43.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'LCD_DVD/dclk1'
+  Total number of paths / destination ports: 17 / 17
+-------------------------------------------------------------------------
+Offset:              7.241ns (Levels of Logic = 1)
+  Source:            u_tft_lcd/de_i (FF)
+  Destination:       de (PAD)
+  Source Clock:      LCD_DVD/dclk1 rising
+
+  Data Path: u_tft_lcd/de_i to de
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   0.720   0.877  u_tft_lcd/de_i (u_tft_lcd/de_i)
+     OBUF:I->O                 5.644          de_OBUF (de)
+    ----------------------------------------
+    Total                      7.241ns (6.364ns logic, 0.877ns route)
+                                       (87.9% logic, 12.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              7.271ns (Levels of Logic = 1)
+  Source:            LCD_DVD/dclk (FF)
+  Destination:       lcd_clk (PAD)
+  Source Clock:      clk rising
+
+  Data Path: LCD_DVD/dclk to lcd_clk
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             3   0.720   0.907  LCD_DVD/dclk (LCD_DVD/dclk1)
+     OBUF:I->O                 5.644          lcd_clk_OBUF (lcd_clk)
+    ----------------------------------------
+    Total                      7.271ns (6.364ns logic, 0.907ns route)
+                                       (87.5% logic, 12.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'FDVD/dclk1'
+  Total number of paths / destination ports: 1270 / 14
+-------------------------------------------------------------------------
+Offset:              16.953ns (Levels of Logic = 8)
+  Source:            SS/dig_5 (FF)
+  Destination:       segment<7> (PAD)
+  Source Clock:      FDVD/dclk1 rising
+
+  Data Path: SS/dig_5 to segment<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               9   0.720   1.463  SS/dig_5 (SS/dig_5)
+     LUT3:I0->O            2   0.551   1.216  SS/display_data<0>121 (SS/N19)
+     LUT4:I0->O            1   0.551   1.140  SS/display_data<2>10 (SS/display_data<2>10)
+     LUT3:I0->O            1   0.551   0.000  SS/display_data<2>31_F (N727)
+     MUXF5:I0->O           2   0.360   1.072  SS/display_data<2>31 (SS/display_data<2>31)
+     LUT2:I1->O            1   0.551   0.000  SS/display_data<2>562 (SS/display_data<2>561)
+     MUXF5:I0->O           8   0.360   1.422  SS/display_data<2>56_f5 (SS/display_data<2>)
+     LUT4:I0->O            1   0.551   0.801  SS/Mrom_segment61 (segment_6_OBUF)
+     OBUF:I->O                 5.644          segment_6_OBUF (segment<6>)
+    ----------------------------------------
+    Total                     16.953ns (9.839ns logic, 7.114ns route)
+                                       (58.0% logic, 42.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'LEDc/output1'
+  Total number of paths / destination ports: 24 / 24
+-------------------------------------------------------------------------
+Offset:              7.271ns (Levels of Logic = 1)
+  Source:            LEDmain/LEDbit_23 (FF)
+  Destination:       LEDs<23> (PAD)
+  Source Clock:      LEDc/output1 rising
+
+  Data Path: LEDmain/LEDbit_23 to LEDs<23>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCPE:C->Q            3   0.720   0.907  LEDmain/LEDbit_23 (LEDmain/LEDbit_23)
+     OBUF:I->O                 5.644          LEDs_23_OBUF (LEDs<23>)
+    ----------------------------------------
+    Total                      7.271ns (6.364ns logic, 0.907ns route)
+                                       (87.5% logic, 12.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'KEY_PAD/DVD0/d_clk'
+  Total number of paths / destination ports: 4 / 4
+-------------------------------------------------------------------------
+Offset:              7.601ns (Levels of Logic = 1)
+  Source:            KEY_PAD/scan_cnt_3 (FF)
+  Destination:       key_scan<3> (PAD)
+  Source Clock:      KEY_PAD/DVD0/d_clk rising
+
+  Data Path: KEY_PAD/scan_cnt_3 to key_scan<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDPE:C->Q            16   0.720   1.237  KEY_PAD/scan_cnt_3 (KEY_PAD/scan_cnt_3)
+     OBUF:I->O                 5.644          key_scan_3_OBUF (key_scan<3>)
+    ----------------------------------------
+    Total                      7.601ns (6.364ns logic, 1.237ns route)
+                                       (83.7% logic, 16.3% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 13.00 secs
+Total CPU time to Xst completion: 12.81 secs
+ 
+--> 
+
+Total memory usage is 306252 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    7 (   0 filtered)
+Number of infos    :  105 (   0 filtered)
+

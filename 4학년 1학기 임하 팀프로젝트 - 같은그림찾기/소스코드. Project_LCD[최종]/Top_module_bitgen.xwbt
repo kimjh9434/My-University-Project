@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\user\Desktop\Project_LCD\Top_module.ncd
+OUTFILE=C:\Users\user\Desktop\Project_LCD\Top_module.bit
+FAMILY=Spartan3
+PART=xc3s2000-4fg456
+WORKINGDIR=C:\Users\user\Desktop\Project_LCD
+LICENSE=ISE
+USER_INFO=210866203_174146296_210576362_824
