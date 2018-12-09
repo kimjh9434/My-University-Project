@@ -1,0 +1,380 @@
+
+
+
+
+이미 수정 하셨는지는 모르겠지만... 제가 딱딱 떨어지도록 수정하려고 하니까 구조상으로 구현되지 않았던지 모르는 부분이 아직 많아서...
+
+일일히 지정하면서 수정할 목록을 조금이나마 알려드릴게요.
+
+cf. '//  <-----------------   요기' 는 지우셔도 됩니다.
+
+1. 시즈탱크 클래스
+
+1.1. 시즈모드 메소드에서
+
+public void siegeMode(){
+	if (isSieged == false){
+		isSieged = true;
+		this.set_Speed(0);
+		this.set_Damage(70);
+		this.set_Range(12);
+		this.set_Image(new ImageIcon("C:\\Starcraft\\시즈모드.png")); //  <-----------------   요기
+		System.out.println("시즈모드가 되었습니다.");
+	}
+	else{
+		isSieged = false;
+		this.set_Speed(3);
+		this.set_Damage(30);
+		this.set_Range(7);
+		this.set_Image(new ImageIcon("C:\\Starcraft\\탱크.png")); //  <-----------------   요기
+		System.out.println("시드모드가 해제되었습니다.");
+	}
+}
+
+로 이미지 변환하는게 있어야 할것 같고요.
+
+1.2. 공격에서 
+public void Attack(){
+		if (isSieged == true){
+			//시즈모드 전용 공격범위
+		}
+		else
+		{
+			//일반유닛과 똑같음
+		}
+	}
+
+으로 이렇게만 되있는데, 오버라이딩 할거라 쳐도, unit 클래스의 attack이 아직 불완전한것 같아서 수정을 못했습니다.(GUI와 어떻게 연동되는지를 몰라서...)
+
+그저 공격범위를 구할때, 일반 퉁퉁포일때는 일반 유닛처럼 공격범위를 구하시면 될듯하고
+
+시즈모드 공격일때는, 
+
+private Position[] getSiegeModeRangeArray(Position[] rangeArray)
+	{
+		int i=0;
+		int x,y;
+		rangeArray = new Position[2*(12+1)*(12+1)-2*(12+1)];
+
+		for(x=-12;x<=12;x++){
+			for(y=-12;y<=12;y++){
+				if(Math.abs(x)+Math.abs(y)<=12 && Math.abs(x)+Math.abs(y)>=4){//  <-----------------   요기
+					if(isMap(x+pos.get_X(), y+pos.get_Y()))
+					{
+						if(GameMain.map.geography[pos.get_Y()+y][pos.get_X()+x]==0){
+							if(GameMain.map.unitLink[pos.get_Y()+y][pos.get_X()+x]==null){
+								rangeArray[i]=new Position(pos.get_X()+x, pos.get_Y()+y);
+								i++;
+							}
+						}
+					}
+				}
+			}
+		}
+		Position[] Array = new Position[i];
+		for(int j=0;j<i;j++)
+			Array[j] = rangeArray[j];
+		return Array;
+	}
+	
+	private Position[] getSiegeModeAttackRangeArray(Position[] atkArr)
+	{
+		int i=0;
+		int x,y;
+		atkArr = new Position[2*(12+1)*(12+1)-2*(12+1)];
+
+		for(x=-12;x<=12;x++){
+			for(y=-12;y<=12;y++){
+				if(Math.abs(x)+Math.abs(y)<=ran && Math.abs(x)+Math.abs(y)>=4){//  <-----------------   요기
+					if(isMap(x+pos.get_X(), y+pos.get_Y()))
+					{
+						if(GameMain.map.geography[pos.get_Y()+y][pos.get_X()+x]==0){
+							if(GameMain.map.unitLink[pos.get_Y()+y][pos.get_X()+x]!=null && GameMain.map.unitLink[pos.get_Y()+y][pos.get_X()+x].get_Player()!=player   
+									&& !GameMain.map.unitLink[pos.get_Y()+y][pos.get_X()+x].isAir){
+								atkArr[i]=new Position(pos.get_X()+x, pos.get_Y()+y);
+								i++;
+							}
+						}
+					}
+				}
+			}
+		}
+		Position[] Array = new Position[i];
+		for(int j=0;j<i;j++)
+			Array[j] = atkArr[j];
+		return Array;
+	}
+
+이 함수를 쓰셔서 범위를 구하시면 될듯 합니다.
+
+보여주기 범위는 getSiegeModeRangeArray이고 (보니까 보여주기 범위를 안쓰시는것 같던데...) 공격유닛의 대상은 getSiegeModeAttackRangeArray에서 구하면 됩니다.
+
+
+1.3 그리고 이거 쓰다보면 빨간줄 그어질텐데 변수 클릭해서 해당 변수의 가시성수정자를 바꿔주시면 될것 같아요.
+private가 protected 로 바꿔더라고요. (원래는 다 protected 로 선언되었어야 했는데... 일단은 넘어가죠)
+protected int player;         //유닛의 소속
+protected boolean isAir;      //공중유닛인지 여부
+
+
+
+//////////////////////////////////////////////
+
+
+2. Map 클래스
+
+2.1. setStartPos메소드.
+
+원래 이 메소드에서 유닛의 위치를 반시계방향으로 돌리면서 유닛이 생산되도록 해야 했는데
+보니까  물지형이라던지 맵을 초과해도 그대로 생산되면서 물을 덮어 쒸우던지 배열범위를 벗어나더라고요.
+이거 에외처리를 못했는데 해당 코드를 복사해서 넣어 줬으면 합니다.
+
+
+public void setStartPos(Unit unit)
+	{
+		boolean isSetPos=false;
+		
+		int i,j=1;
+		int x,y;
+		if(unit.get_Player()==1){
+			x=3; 
+			y=maxY/2;
+		}else{
+			x=maxX-4; 
+			y=maxY/2;
+		}
+		while(!isSetPos)
+		{
+			for(i=0;i<j && unitLink[y][x]!=null && !isSetPos ;i++){
+				y++;
+			}
+			if(isMap(x, y) && geography[y][x]==0 && unitLink[y][x]==null && !isSetPos){
+				unit.set_Pos(x, y);
+				isSetPos=true;
+			}
+			for(i=0;i<j && unitLink[y][x]!=null && !isSetPos ;i++){
+				x++;
+			}
+			if(isMap(x, y) && geography[y][x]==0 && unitLink[y][x]==null && !isSetPos){
+				unit.set_Pos(x, y);
+				isSetPos=true;
+			}
+			j++;
+			for(i=0;i<j && unitLink[y][x]!=null && !isSetPos ;i++){
+				y--;
+			}
+			if(isMap(x, y) && geography[y][x]==0 && unitLink[y][x]==null && !isSetPos){
+				unit.set_Pos(x, y);
+				isSetPos=true;
+			}
+			for(i=0;i<j && unitLink[y][x]!=null && !isSetPos ;i++){
+				x--;
+			}
+			if(isMap(x, y) && geography[y][x]==0 && unitLink[y][x]==null && !isSetPos){	
+				unit.set_Pos(x, y);
+				isSetPos=true;
+			}
+			j++;
+		}
+	}
+
+
+	public boolean isMap(int x, int y)
+	{
+		return (0 <= x && x < GameMain.map.maxX && 0 <= y && y < GameMain.map.maxY);
+	}
+
+
+//////////////////////////////////////////////
+
+3. 고스트 클래스
+
+아참. 코드 맘대로 수정해도 된다고 하셔서 락다운에 대해서 진지하게 고민해봤는데요.
+
+현재 턴을 전역변수로 넣고 서로 턴을 넘길때마다 증가하는 식으로 한다음에, 
+
+Unit에도 턴변수를 추가하고, 락다운 당한 유닛은 현재 턴(전역변수)값을 받고, 행동 불가상태로 해놓고 하는데 꼬이더라고요.
+
+이놈들은 턴변화될때 초기화되면 안되니까, 그것도 추가해줘야하고...
+
+고려해 줘야 할게 많아서 2턴이상 쉬게하는건 포기했습니다.
+
+
+그래서 생각해보다상태를 초기화하는게 자신의 턴을 끝낼때다보니, 바로 다음 한턴만 못쓰게 하는것이라면 그런것 추가 필요없이 구현가능할것 같습니다.
+
+공격범위받고 기술을 썼을때, 해당 유닛의 공격가능, 이동가능을 false로 바꿔주면 다음턴에는 그 유닛을 이용하지 못할테니까요.
+
+
+그런데 문제는 따른곳에서 생겼습니다. 이미지가 어떻게 될지는 몰라도... 락다운 당한 이미지로 바꿔줘야 하는지 하는게 걸리내요.
+그러고 걸릴때, set_Image함수를 써서 이미지를 락다운 당한 이미지로 바꿔주려면 당한 유닛이 어떤 유닛인지를 알아야 하며,
+원래대로 해제하려면 리셋할때 일괄적으로 평범한 유닛이미지로 set시켜주는 과정이 필요한데, 이것도 해당유닛이 어떤유닛인지 아는 과정이 필요해서...
+
+불가능한건 아닌데, 이미지 구하는것도 귀찮고 처리면에서도 상당히 비효율적이라서 걱정입니다.
+
+이미지는 안바꾼다면, 사용자입장에서 볼때는 이 유닛이 락다운을 당해서 못움직이는건지 아닌지 정도는 확인이 가능해야하지 않아 싶은데 
+현재 GUI상에서는 보여주기가 쉽지 않다는 문제점이 있내요.
+
+일단 코드는 이거에요.
+
+public void lockdown(Unit u)
+	{
+		if(isLockdown(u))
+		{
+			u.set_Attacked(false);
+			u.set_Moved(false);
+		}
+	}
+	public boolean isLockdown(Unit u)
+	{
+		boolean ret=false;
+		if(String.valueOf(u.getClass()).compareTo("class UnitList.Marin")!=0 &&
+		   String.valueOf(u.getClass()).compareTo("class UnitList.Firebat")!=0 &&
+		   String.valueOf(u.getClass()).compareTo("class UnitList.Ghost")!=0)
+		{
+			ret=true;
+		}
+		return ret;
+	}
+
+
+이거 기술메소드의 코드자체는 이게 끝인것 같고요,
+
+추가적인 isLockdown메소드는 기술을 쓸때, 소형유닛이 아니면 기술을 쓸수 있게 한거에요.
+
+
+////////////////////////////////////////
+
+4. 베틀크루져 클래스
+
+
+이거 어떻게 진행됬는지는 모르겠는데...
+
+public void yamatogun(Unit u){
+	u.set_Hp(u.get_Hp() - 100);
+}
+
+에서 보면
+
+public void yamatogun(Unit u){
+int enemy_hp = u.get_Hp() + - 100;
+
+if(enemy_hp>0)
+{
+	enemy.set_Hp(enemy_hp);
+}else
+{
+	enemy.set_Hp(0);
+	enemy.manager.isDie();
+	GameMain.map.unitLink[enemy.pos.get_Y()][enemy.pos.get_X()]=null;
+	if(String.valueOf(enemy.getClass()).compareTo("class UnitList.CommandCenter")==0)
+	{
+		GameMain.gameOver=true;
+		System.out.println("적 커맨드센터를 파괴하였습니다.");
+	}else{
+		System.out.println("적 유닛을 파괴하였습니다.");
+	}
+}
+}
+로 기본 공격의 틀을 똑같이 가져와야 할것 같아요.
+
+
+/////////////////////////////////////////
+
+
+이외에 디팬시브의 경우는...클로킹도 답이 없는 상황에서 그냥 사이언스베슬과 함께 없애버리는것이 어떨지...
+
+얘는 문제점이 락다운과는 다르게, 자신턴이 끝나고 자신의 속성이 초기화 된 이후에, 상대방이 자신을 공격할때 효력을 발휘하는 건데
+
+쉽지가 변수를 추가해서 파악해야 하며, 디팬시브 변수여부 변수를 추가해서 공격시에 고려해줘야하거든요.
+
+(방어력을 20만 정도 증가시킨다고 쳐도 현재 알고리즘상으로는 오히려 체력이 증가하는... 원래는 체력이 1씩 깍이도록 해야해서)
+
+///////////////////////////////////////
+
+클로킹은 말햇다시피 딱히 답이 없내요... 맵상에서 내지도와 상대방 지도 2개로 나뉘어져 있지도 않다는점이 결정적이고요.
+
+[나한테는 보이면서 상대방에게는 안보이게 해야하는데 1개로 통합하다보니, 지도상해서 보여줄때 그냥 보여질것 같아서...] 
+
+
+//////////////////////////////////////
+
+드랍쉽같은 경우는 고려할수 있긴 한데, 보아하니 미리 제외해버리신것 같아서 일단 보류했습니다.
+
+탑승 범위안에 들어 있는 유닛들 태울 범위랑, 해당 범위내에서 유닛들 탈때, 넣을 Unit배열도 필요해보이고 유닛들 내릴때 내릴공간이라던지 등등도 고려해줘야하는데
+
+GUI상에서 어떻게 돌아갈지 몰라서... [유닛이 탈때 지도상에서 없애거나 내릴때 다시 넣는건 상관없는데, 태운 유닛을 어떻게 보여주고, 내릴 유닛을 어떻게 선택할것인가가 문제...]
+
+//////////////////////////////////////
+
+
+이래저래 인터페이스에 대해서 쭉 고민하다보니 한게 없내요...
+
+
+결론은 '지금 상태에서는 힘든게 많다'여서 딱히 도움이 되드리기 힘들것 같습니다.
+
+
+제가 한것 중에서 이상한거라던지 문제가 있는점, 추가적으로 시키시럼이 있으시면 카톡방으로 알려주세요.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,3 @@
+참고 !
+Starcraft폴더에 있는 Imagefile들은 
+c:\Starcraft\ 폴더로 옮겨서 실행해야 합니다!!
